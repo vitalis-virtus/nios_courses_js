@@ -3,7 +3,7 @@
 //1 task
 const array1 = ["a", "b", "c"];
 const array2 = [1, 2, 3];
-const resultArray = array1.concat(array2);
+const resultArray = [].concat(array1, array2);
 console.log("task 1: ", resultArray);
 
 //task 1
