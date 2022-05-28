@@ -13,7 +13,29 @@ function CountOccurences(str, substr) {
 //_________________________________________________________________________________________________________//
 // Storage
 
-function storage() {}
+function storage() {
+  let obj = {
+    name: "",
+    age: "",
+  };
+  return {
+    setValue(valueName, value) {
+      obj[valueName] = value;
+    },
+    getValue(valueName) {
+      return obj[valueName] ? obj[valueName] : undefined;
+    },
+  };
+}
+
+//перевірка
+const propsStorage = storage();
+propsStorage.setValue("name", "Peter");
+propsStorage.setValue("age", 30);
+console.log(propsStorage.getValue("name"));
+console.log(propsStorage.getValue("age"));
+propsStorage.setValue("age", 31);
+console.log(propsStorage.getValue("age"));
 
 //_________________________________________________________________________________________________________//
 // toDigitArray
